@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Thu Nov 10 17:22:31 2016 Arthur Baurens
-** Last update Tue Nov 15 15:44:16 2016 Arthur Baurens
+** Last update Fri Nov 18 12:03:16 2016 Arthur Baurens
 */
 
 #include <stdlib.h>
@@ -17,10 +17,8 @@ int	get_flags(char *token, t_arg *args)
   char	*cmp;
 
   i = 0;
-  cmp = "-+ #";
+  cmp = "-+ #0";
   while (token[i] && is_in_str(token[i], cmp))
-    i++;
-  if (token[i] && token[i] == '0')
     i++;
   args->flags = my_strncat(NULL, token, i);
   return (i);
