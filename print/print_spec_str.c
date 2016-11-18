@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Tue Nov 15 11:42:11 2016 Arthur Baurens
-** Last update Tue Nov 15 20:33:42 2016 Arthur Baurens
+** Last update Fri Nov 18 23:33:02 2016 Arthur Baurens
 */
 
 #include <unistd.h>
@@ -67,6 +67,8 @@ int	print_true_string(void *data, t_arg *modif)
 
   ret = 0;
   value = (char **)data;
+  if (*value == NULL)
+    *value = "(null)";
   disp_len = spec_str_len(*value, 0);
   ret += (padding = do_padding(modif, -1, disp_len, -1));
   ret += my_put_specstr(*value, 0);

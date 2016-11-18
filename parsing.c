@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Sat Nov 12 17:05:05 2016 Arthur Baurens
-** Last update Fri Nov 18 12:01:23 2016 Arthur Baurens
+** Last update Fri Nov 18 22:50:38 2016 Arthur Baurens
 */
 
 #include <stdlib.h>
@@ -74,7 +74,7 @@ static int print_flags(const char *flags)
   if (is_in_str('+', flags))
     i += my_putstr("+", 0);
   else if (is_in_str(' ', flags))
-    i += my_putstr("+", 0);
+    i += my_putstr(" ", 0);
   if (is_in_str('-', flags))
     i += my_putstr("-", 0);
   else if (is_in_str('0', flags))
@@ -89,6 +89,7 @@ static int	display_argument(t_arg *arg, t_list **list)
 
   ret = 1;
   my_putstr("%", 0);
+  //printf("\nREST=%s\n", arg->rest);
   ret += print_flags(arg->flags);
   if (arg->width != 0)
     ret += my_putnbr_base(arg->width, "0123456789");
