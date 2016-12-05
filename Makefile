@@ -5,7 +5,7 @@
 ## Login   <arthur.baurens@epitech.eu>
 ##
 ## Started on  Wed Nov  9 10:51:50 2016 Arthur Baurens
-## Last update Tue Nov 15 20:25:33 2016 Arthur Baurens
+## Last update Mon Dec  5 06:15:27 2016 Arthur Baurens
 ##
 
 CC			=	gcc
@@ -37,7 +37,7 @@ NAME		=	libmy.a
 
 INCLUDE		=	-I./include
 
-CFLAGS		=	$(INCLUDE) -g #-W -Wall -Werror -ansi -pedantic
+CFLAGS		=	$(INCLUDE) -g -W -Wall -Werror -ansi -pedantic
 
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)

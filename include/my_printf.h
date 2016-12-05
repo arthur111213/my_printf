@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Wed Nov  9 11:17:16 2016 Arthur Baurens
-** Last update Tue Nov 15 19:31:58 2016 Arthur Baurens
+** Last update Sat Dec  3 18:48:23 2016 Arthur Baurens
 */
 
 #ifndef MY_PRINTF_H_

@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Mon Nov 14 19:33:00 2016 Arthur Baurens
-** Last update Tue Nov 15 20:21:51 2016 Arthur Baurens
+** Last update Mon Dec  5 06:15:46 2016 Arthur Baurens
 */
 
 #include <unistd.h>
@@ -60,7 +60,7 @@ int			print_hex(void *data, t_arg *modif)
       !is_in_str('0', modif->flags)) || modif->precision != 0)
     padding[1] += my_putstr("0x", 0);
   while (modif->precision-- > 0)
-    padding[1] += ("0", 0);
+    padding[1] += my_putstr("0", 0);
   padding[1] += my_putnbr_base(to_print, "0123456789abcdef");
   padding[1] += do_padding(modif, padding[0], disp_len, -1);
   return (padding[1]);

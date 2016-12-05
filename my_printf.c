@@ -5,7 +5,7 @@
 ** Login   <arthur.baurens@epitech.eu>
 **
 ** Started on  Wed Nov  9 10:51:57 2016 Arthur Baurens
-** Last update Fri Nov 18 23:26:36 2016 Arthur Baurens
+** Last update Mon Dec  5 06:18:05 2016 Arthur Baurens
 */
 
 #include <stdio.h>
@@ -15,7 +15,7 @@
 #include <unistd.h>
 #include "my_printf.h"
 
-int	get_string_part(char *f, t_list **res, int i, int *count)
+static int	get_string_part(char *f, t_list **res, int i)
 {
   int	j;
 
@@ -30,22 +30,19 @@ t_list		*parse_format(char *f)
 {
   int		i;
   int		j;
-  int		count;
   t_list	*res;
   char		*fl;
 
   i = 0;
   res = NULL;
   fl = FLAGS;
-  count = 0;
   while (f[i])
     {
       j = 0;
-      i += get_string_part(f, &res, i, &count);
+      i += get_string_part(f, &res, i);
       while (f[i + j] && f[i + j + 1] && (!is_in_str(f[i + j], fl) || j == 0))
 	j++;
       add_to_list(&res, &f[i], j + 1, 1);
-      count++;
       i += j;
       if (f[i] == '\0')
 	return (res);
